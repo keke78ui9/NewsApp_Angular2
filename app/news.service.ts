@@ -13,15 +13,21 @@ export class NewsService {
 
     }
 
-  getNews(): Promise<News[]> {
-    return this.http.get(this.newsUrl)
-               .toPromise()
-               .then(response => response.json().data)
-               .catch(this.handleError);
-  }
+    getNews(): Promise<News[]> {
+      return this.http.get(this.newsUrl)
+                .toPromise()
+                .then(response => response.json().data)
+                .catch(this.handleError);
+    }
 
-  private handleError(error: any) {
-      console.error('error year!', error);
-      return Promise.reject(error.message || error);
-  }
+    getOneNews(id: string) : Promise<News> {
+      return this.getNews()
+        .then(x => x.find(y => y.Id === id));
+    }
+
+
+    private handleError(error: any) {
+        console.error('error year!', error);
+        return Promise.reject(error.message || error);
+    }
 }

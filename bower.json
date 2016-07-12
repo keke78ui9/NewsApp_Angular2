@@ -1,0 +1,20 @@
+{
+  "name": "newsApp",
+  "description": "newsApp for tech news",
+  "main": "index.html",
+  "license": "MIT",
+  "keywords": [
+    "angular2"
+  ],
+  "homepage": "https://github.com/keke78ui9/NewsApp_Angular2",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "v4.0.0-alpha.2"
+  }
+}

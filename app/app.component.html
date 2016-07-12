@@ -1,6 +1,22 @@
-<h1>My News</h1>
-<ul>
-    <li *ngFor="let x of news">
-        {{x.Title}}
+<article class="container-fluid">
+<h1>Tech News</h1>
+<hr>
+<ol>
+    <li *ngFor="let oneNews of news" 
+    (click)="oneSelect(oneNews)"
+    [class.selected]="oneNews === selectedNews">
+        <a href="javascript:void(0)">{{oneNews.Title}}</a>
     </li>
-</ul>
+</ol>
+<hr>
+<div *ngIf="selectedNews">
+    <p [innerHTML]="selectedNews.Description"></p>
+    <h3>
+        <span class="label label-primary" *ngFor="let tag of selectedNews.Tags">{{tag}}</span>
+    </h3>
+    <p>
+        <a href="{{selectedNews.Link}}" class="btn btn-default" target="_blank">More</a>
+    </p>
+    
+</div>
+</article>

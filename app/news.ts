@@ -4,4 +4,6 @@ export class News {
     SlugTitle: string;
     Link: string;
     PublishDate: string;
+    Tags: any;
+    Category: string;
 }

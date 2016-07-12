@@ -1,5 +1,4 @@
-#A Quick project for hello world angular2
-#after clone this git repository
+#A News App
 Run npm install to install all the node package
 `
 npm install -d

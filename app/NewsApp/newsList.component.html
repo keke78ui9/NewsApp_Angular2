@@ -1,11 +1,12 @@
-<h1>Tech News</h1>
+<h1>Tech News App</h1>
 <hr>
 <ol>
     <li *ngFor="let tn of techNewsList" 
-    (click)="onSelect(tn)"
+    (mouseover)="onMouseOver(tn)"
     [class.selected]="tn === selectedNews">
         <a href="javascript:void(0)">{{tn.Title}}</a>
+        <news-detail [tn]="selectedNews" [hidden]="tn !== selectedNews"></news-detail>
     </li>
+    
 </ol>
 <hr>
-<news-detail [tn]="selectedNews"></news-detail>

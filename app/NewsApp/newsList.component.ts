@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { News } from './news';
 import { TechNewsService } from './techNews.service';
-import { NewsDetailComponent } from './news-detail.component';
+import { NewsTagsComponent } from './news-tags.component';
 
 @Component({
   selector: 'my-app',
   templateUrl: 'app/newsApp/newsList.component.html',
-  directives: [NewsDetailComponent],
+  directives: [NewsTagsComponent],
   providers: [
     TechNewsService
   ]
@@ -32,7 +32,7 @@ export class NewsListComponent implements OnInit {
       this.getData();
     }
 
-    onSelect(news: News) {
+    onMouseOver(news: News) {
       console.info(news);
         this.selectedNews = news;
     }

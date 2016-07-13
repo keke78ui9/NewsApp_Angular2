@@ -1,0 +1,6 @@
+<div *ngIf="tn">
+    <h6>
+        <span class="label label-primary" *ngFor="let tag of tn.Tags">{{tag}}</span> 
+        <a href="{{tn.Link}}" class="btn btn-default" target="_blank">Read More</a>
+    </h6>
+</div>

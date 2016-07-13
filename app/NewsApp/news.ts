@@ -6,4 +6,5 @@ export class News {
     PublishDate: string;
     Tags: any;
     Category: string;
+    Description: string;
 }

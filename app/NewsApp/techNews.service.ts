@@ -6,7 +6,7 @@ import 'rxjs/add/operator/toPromise';
 import { News } from './news';
 
 @Injectable()
-export class NewsService {
+export class TechNewsService {
     private newsUrl = 'api/news';
 
     constructor(private http: Http) {
@@ -14,10 +14,13 @@ export class NewsService {
     }
 
     getNews(): Promise<News[]> {
-      return this.http.get(this.newsUrl)
+        console.info("getNews()");
+      var data = this.http.get(this.newsUrl)
                 .toPromise()
                 .then(response => response.json().data)
                 .catch(this.handleError);
+                console.info(data);
+                return data;
     }
 
     getOneNews(id: string) : Promise<News> {

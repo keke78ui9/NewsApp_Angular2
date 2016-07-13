@@ -1,0 +1,11 @@
+<h1>Tech News</h1>
+<hr>
+<ol>
+    <li *ngFor="let tn of techNewsList" 
+    (click)="onSelect(tn)"
+    [class.selected]="tn === selectedNews">
+        <a href="javascript:void(0)">{{tn.Title}}</a>
+    </li>
+</ol>
+<hr>
+<news-detail [tn]="selectedNews"></news-detail>

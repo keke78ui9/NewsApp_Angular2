@@ -1,0 +1,10 @@
+
+<div *ngIf="tn">
+    <p [innerHTML]="tn.Description"></p>
+    <h3>
+        <span class="label label-primary" *ngFor="let tag of tn.Tags">{{tag}}</span>
+    </h3>
+    <p>
+        <a href="{{tn.Link}}" class="btn btn-default" target="_blank">More</a>
+    </p>
+</div>
